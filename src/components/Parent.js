@@ -1,5 +1,6 @@
 import React,{useState} from "react"
 import Form from "./Form"
+import DisplayData from "./DisplayData";
 function Parent (){
     const [firstName, setFirstName] = useState("John");
     const [lastName, setLastName] = useState("Henry");
@@ -14,10 +15,16 @@ function Parent (){
       function handleNewsletterChange(event){
         setNewsletter(event.target.checked);
       }return(
-        <Form handleFirstNameChange={handleFirstNameChange} firstName={firstName}
-        handleLastNameChange={handleLastNameChange} lastName={lastName}
+        <div>
+        <Form 
+        handleFirstNameChange={handleFirstNameChange} 
+        firstName={firstName}
+        handleLastNameChange={handleLastNameChange} 
+        lastName={lastName}
         handleNewsletterChange={handleNewsletterChange}
         newsletter={newsletter}/>
+        <DisplayData firstName={firstName} lastName={lastName}/>
+        </div>
       )
 }
 export default Parent;

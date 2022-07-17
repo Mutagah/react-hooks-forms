@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 //Controlled form is a form taht derives its input values from a state
 function Form({handleFirstNameChange,firstName,handleLastNameChange,lastName,handleNewsletterChange,
 newsletter}) {

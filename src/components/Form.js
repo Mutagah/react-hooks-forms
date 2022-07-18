@@ -1,20 +1,27 @@
 import React from "react";
-//Controlled form is a form taht derives its input values from a state
-function Form({handleFirstNameChange,firstName,handleLastNameChange,lastName,handleNewsletterChange,
-newsletter}) {
+function Form(
+  {firstName,
+  lastName,
+  newsletter,
+  handleFirstNameChange,
+  handleSecondNameChange,
+  handleNewsLetterChange}
+){
   return (
     <form>
-      <input type="text" onChange={handleFirstNameChange} value={firstName}  />
-      <input type="text" onChange={handleLastNameChange} value={lastName} />
-      <label htmlFor="newsletter">Subscribe to our Newsletter?</label>
-      <input
-      type="checkbox"
-      id="newsletter"
-      onChange={handleNewsletterChange}
-      checked={newsletter}/>
+      <input type="text" onChange={handleFirstNameChange} value={firstName}/>
+      <input type="text" onChange={handleSecondNameChange} value={lastName}/>
+      <label htmlFor="newsletter">Submit to our newsletter?</label>
+        <input
+          type="checkbox"
+          id="newsletter"
+          onChange={handleNewsLetterChange}
+          checked={newsletter}/>
       <button type="submit">Submit</button>
-    </form>
-  );
-}
 
+    </form>
+  )
+}
 export default Form;
+
+
